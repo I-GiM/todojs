@@ -32,8 +32,14 @@ function addItem(){
   //clear the box
   document.getElementById('todoItem').value='';
  }
- 
+ localStorage.setItem('Last', todoItemValue);
 
+}
+
+//view last item
+function lastItem() {
+	alert(localStorage.getItem('Last'));
+	
 }
 
 //this function will delete a single todo item from the list. 
@@ -54,4 +60,7 @@ function completeItem(item){
   item.parentElement.innerHTML = newContent;
   
 }
+
+//display last item
+
 
